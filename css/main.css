@@ -3,6 +3,7 @@
     background-color: black;
     padding: .75%;
     width: 18rem;
+    border-radius: 1%;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(1fr);
