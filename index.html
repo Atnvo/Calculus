@@ -2,6 +2,7 @@
     Rekenmachine Calculus 
     StartUp Periode 4
     20/06/2018 AMO1B
+    https://github.com/Atnvo/Calculus
 -->
 
 <!DOCTYPE html>
@@ -10,61 +11,65 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Calculus Rekenmachine StartUp Periode 4 AMO1B">
     <meta name="author" content="Alavi Tawanggire Nusananta">
     <title></title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" type="image/png" href="images/fav.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/fav.png" />
 </head>
 
 <body>
-    
+
     <div id="container">
-        
+
         <!-- Top rij informatie -->
-        <div id="logo"><img src="images/Logo_wit1.png"><p>Rekenmachine | Calculus v2</p></div>
+        <div id="logo">
+            <img src="images/Logo_wit1.png">
+            <p>Rekenmachine | Calculus v2</p>
+        </div>
 
 
         <!-- Scherm veld waar berekening invulwaardes en antwoorden worden weergegeven -->
         <input type="text" id="Scherm-veld">
-        
-        
+
+
         <!-- De "onclick='getInput(this.value)'' stuurt de waarde van de button naar de functie
              getinput(value) waar de waarde van de button naar de scherm veld word weergegeven.
          -->
-        
-         <!-- Rij 1 -->
-        <button class="btn b-fa"  value="%" onclick="getInput(this.value)">%</button>
-        <button class="btn b-fa"  value="√" onclick="getInput(this.value)">√</button>
-        <button class="btn b-fa"  onclick="clr()">Clr</button>
-        <button class="btn b-f"   value="/" onclick="getInput(this.value)">/</button>
+
+        <!-- Rij 1 -->
+        <button class="btn b-fa" value="%" onclick="getInput(this.value)">%</button>
+        <button class="btn b-fa" value="√" onclick="sqr();">√</button>
+        <button class="btn b-fa" onclick="clr()">Clr</button>
+        <button class="btn b-f" value="/" onclick="getInput(this.value)">/</button>
 
         <!-- Rij 2 -->
         <button class="btn b-nmb" value="9" onclick="getInput(this.value)">9</button>
         <button class="btn b-nmb" value="8" onclick="getInput(this.value)">8</button>
         <button class="btn b-nmb" value="7" onclick="getInput(this.value)">7</button>
-        <button class="btn b-f"   value="*" onclick="getInput(this.value)">*</button>
+        <button class="btn b-f" value="*" onclick="getInput(this.value)">*</button>
 
         <!-- rij 3 -->
         <button class="btn b-nmb" value="6" onclick="getInput(this.value)">6</button>
         <button class="btn b-nmb" value="5" onclick="getInput(this.value)">5</button>
         <button class="btn b-nmb" value="4" onclick="getInput(this.value)">4</button>
-        <button class="btn b-f"   value="-" onclick="getInput(this.value)">-</button>
+        <button class="btn b-f" value="-" onclick="getInput(this.value)">-</button>
 
         <!-- rij 4 -->
         <button class="btn b-nmb" value="3" onclick="getInput(this.value)">3</button>
         <button class="btn b-nmb" value="2" onclick="getInput(this.value)">2</button>
         <button class="btn b-nmb" value="1" onclick="getInput(this.value)">1</button>
-        <button class="btn b-f"   value="+" onclick="getInput(this.value)">+</button>
-        
+        <button class="btn b-f" value="+" onclick="getInput(this.value)">+</button>
+
         <!-- Rij 5 -->
         <button class="btn b-nmb" value="." onclick="getInput(this.value)">.</button>
         <button class="btn b-nmb" value="0" onclick="getInput(this.value)">0</button>
-        <button class="btn b-nmb" value="^" onclick="getInput(this.value)">^</button>        
-        <button class="btn b-f"   onclick="bereken()">=</button>
+        <button class="btn b-nmb" value="^" onclick="getInput(this.value)">^</button>
+        <button class="btn b-f" onclick="bereken()">=</button>
 
 
     </div>
+
 
     <!-- Linkt de javascript aan de html -->
     <!-- Hier word de berekeningen gemaakt en dan weer weergegeven in de html bestand -->

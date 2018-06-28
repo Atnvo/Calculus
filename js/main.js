@@ -1,4 +1,4 @@
-// Links voor uitleg van gebruikte code
+// Links voor uitleg van gebruikte code\
 
 //  - Eval();
 //    https://www.w3schools.com/jsref/jsref_eval.asp
@@ -11,6 +11,9 @@
 
 //  - parseInt();
 //    https://www.w3schools.com/jsref/jsref_parseInt.asp
+
+//  - parseFloat();
+//    https://www.w3schools.com/jsref/jsref_parsefloat.asp
 
 //  - Math.pow();
 //    https://www.w3schools.com/jsref/jsref_pow.asp
@@ -50,8 +53,8 @@ function bereken() {
     procent(input);
 
   // Alse de string "input" een "√" teken bevat word het doorgestuurd naar "sqr();"
-  } else if (input.indexOf("√")  != -1){  
-    sqr(input);
+  // } else if (input.indexOf("√")  != -1){  
+  //   sqr(input);
 
   // Als de string niet de bovense tekens bevaten word de string(variable)
   // In een "eval();" -> "Evaluate/Execute" gezet waardoor het geleest word 
@@ -68,7 +71,6 @@ function bereken() {
 // root (wortel) van de waarde
 function sqr() {
   var input = document.getElementById("Scherm-veld").value;
-  console.log(Math.sqrt(input));
   document.getElementById("Scherm-veld").value = Math.sqrt(input);
 }
 
@@ -110,3 +112,4 @@ function clr() {
   document.getElementById("Scherm-veld").value = "";
   input = "";
 }
+
