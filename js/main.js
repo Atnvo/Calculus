@@ -100,6 +100,7 @@ function procent(input) {
   var a = str.indexOf("%");
   var g1 = str.substring(0, a);
   var g2 = str.substring(a + 1, str.length);
+  // parseFloat kan je gebruiken als de getal een decimaale waarde heeft en daarmee wilt berekenen.
   document.getElementById("Scherm-veld").value =  parseInt(g1) * parseFloat("0."+g2);
 }
 
