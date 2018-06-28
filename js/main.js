@@ -47,11 +47,11 @@ function bereken() {
 
   // Alse de string "input" een "%" teken bevat word het doorgestuurd naar "procent();"
   } else if (input.indexOf("%") != -1) {
-    procent();
+    procent(input);
 
   // Alse de string "input" een "√" teken bevat word het doorgestuurd naar "sqr();"
   } else if (input.indexOf("√")  != -1){  
-    sqr();
+    sqr(input);
 
   // Als de string niet de bovense tekens bevaten word de string(variable)
   // In een "eval();" -> "Evaluate/Execute" gezet waardoor het geleest word 
@@ -68,6 +68,7 @@ function bereken() {
 // root (wortel) van de waarde
 function sqr() {
   var input = document.getElementById("Scherm-veld").value;
+  console.log(Math.sqrt(input));
   document.getElementById("Scherm-veld").value = Math.sqrt(input);
 }
 
@@ -93,12 +94,13 @@ function pwr() {
 // Door "str.substring" gebruiken.
 // "indexOf" zoekt de string naar een specifieke waarde en geeft de positie van 
 // dat getal aal als een getal.
-function procent() {
+function procent(input) {
+  // var input = document.getElementById("Scherm-veld").value;
   var str = input;
-  var n = str.indexOf("%");
-  var g1 = str.substring(0, n);
-  var g2 = str.substring(n + 1, str.length);
-  document.getElementById("Scherm-veld").value = (parsetInt(g1) / parseInt(g2)) * 10;
+  var a = str.indexOf("%");
+  var g1 = str.substring(0, a);
+  var g2 = str.substring(a + 1, str.length);
+  document.getElementById("Scherm-veld").value =  parseInt(g1) * parseFloat("0."+g2);
 }
 
 // maakt de value (waarde) van de input veld "Scherm-veld" leeg
